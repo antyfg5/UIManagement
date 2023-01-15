@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class UIManager : MonoBehaviour
+{
+
+    public Animator StartButton;
+    public Animator SettingsButton;
+
+    
+    public void StartGame()
+    {
+  		SceneManager.LoadScene(1);
+    }
+
+  
+    public void OpenSettings()
+    {
+        StartButton.SetBool("IsHidden", true);
+        SettingsButton.SetBool("IsHidden", true);
+    }
+}
+    
+        
+    
